@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19ACD85028617BD8002DA840 /* BarzookaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD84F28617BD8002DA840 /* BarzookaApp.swift */; };
+		19ACD85228617BD8002DA840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD85128617BD8002DA840 /* ContentView.swift */; };
+		19ACD85428617BDA002DA840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACD85328617BDA002DA840 /* Assets.xcassets */; };
+		19ACD85728617BDA002DA840 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACD85628617BDA002DA840 /* Preview Assets.xcassets */; };
+		19ACD86228617BDA002DA840 /* BarzookaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD86128617BDA002DA840 /* BarzookaTests.swift */; };
+		19ACD86C28617BDA002DA840 /* BarzookaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD86B28617BDA002DA840 /* BarzookaUITests.swift */; };
+		19ACD86E28617BDA002DA840 /* BarzookaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD86D28617BDA002DA840 /* BarzookaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19ACD85E28617BDA002DA840 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ACD84428617BD8002DA840 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ACD84B28617BD8002DA840;
+			remoteInfo = Barzooka;
+		};
+		19ACD86828617BDA002DA840 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ACD84428617BD8002DA840 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ACD84B28617BD8002DA840;
+			remoteInfo = Barzooka;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19ACD84C28617BD8002DA840 /* Barzooka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barzooka.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACD84F28617BD8002DA840 /* BarzookaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarzookaApp.swift; sourceTree = "<group>"; };
+		19ACD85128617BD8002DA840 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		19ACD85328617BDA002DA840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19ACD85628617BDA002DA840 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19ACD85828617BDA002DA840 /* Barzooka.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Barzooka.entitlements; sourceTree = "<group>"; };
+		19ACD85D28617BDA002DA840 /* BarzookaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarzookaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACD86128617BDA002DA840 /* BarzookaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarzookaTests.swift; sourceTree = "<group>"; };
+		19ACD86728617BDA002DA840 /* BarzookaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarzookaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ACD86B28617BDA002DA840 /* BarzookaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarzookaUITests.swift; sourceTree = "<group>"; };
+		19ACD86D28617BDA002DA840 /* BarzookaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarzookaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19ACD84928617BD8002DA840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACD85A28617BDA002DA840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACD86428617BDA002DA840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19ACD84328617BD8002DA840 = {
+			isa = PBXGroup;
+			children = (
+				19ACD84E28617BD8002DA840 /* Barzooka */,
+				19ACD86028617BDA002DA840 /* BarzookaTests */,
+				19ACD86A28617BDA002DA840 /* BarzookaUITests */,
+				19ACD84D28617BD8002DA840 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19ACD84D28617BD8002DA840 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19ACD84C28617BD8002DA840 /* Barzooka.app */,
+				19ACD85D28617BDA002DA840 /* BarzookaTests.xctest */,
+				19ACD86728617BDA002DA840 /* BarzookaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19ACD84E28617BD8002DA840 /* Barzooka */ = {
+			isa = PBXGroup;
+			children = (
+				19ACD84F28617BD8002DA840 /* BarzookaApp.swift */,
+				19ACD85128617BD8002DA840 /* ContentView.swift */,
+				19ACD85328617BDA002DA840 /* Assets.xcassets */,
+				19ACD85828617BDA002DA840 /* Barzooka.entitlements */,
+				19ACD85528617BDA002DA840 /* Preview Content */,
+			);
+			path = Barzooka;
+			sourceTree = "<group>";
+		};
+		19ACD85528617BDA002DA840 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				19ACD85628617BDA002DA840 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19ACD86028617BDA002DA840 /* BarzookaTests */ = {
+			isa = PBXGroup;
+			children = (
+				19ACD86128617BDA002DA840 /* BarzookaTests.swift */,
+			);
+			path = BarzookaTests;
+			sourceTree = "<group>";
+		};
+		19ACD86A28617BDA002DA840 /* BarzookaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19ACD86B28617BDA002DA840 /* BarzookaUITests.swift */,
+				19ACD86D28617BDA002DA840 /* BarzookaUITestsLaunchTests.swift */,
+			);
+			path = BarzookaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19ACD84B28617BD8002DA840 /* Barzooka */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACD87128617BDA002DA840 /* Build configuration list for PBXNativeTarget "Barzooka" */;
+			buildPhases = (
+				19ACD84828617BD8002DA840 /* Sources */,
+				19ACD84928617BD8002DA840 /* Frameworks */,
+				19ACD84A28617BD8002DA840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Barzooka;
+			productName = Barzooka;
+			productReference = 19ACD84C28617BD8002DA840 /* Barzooka.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19ACD85C28617BDA002DA840 /* BarzookaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACD87428617BDA002DA840 /* Build configuration list for PBXNativeTarget "BarzookaTests" */;
+			buildPhases = (
+				19ACD85928617BDA002DA840 /* Sources */,
+				19ACD85A28617BDA002DA840 /* Frameworks */,
+				19ACD85B28617BDA002DA840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ACD85F28617BDA002DA840 /* PBXTargetDependency */,
+			);
+			name = BarzookaTests;
+			productName = BarzookaTests;
+			productReference = 19ACD85D28617BDA002DA840 /* BarzookaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19ACD86628617BDA002DA840 /* BarzookaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ACD87728617BDA002DA840 /* Build configuration list for PBXNativeTarget "BarzookaUITests" */;
+			buildPhases = (
+				19ACD86328617BDA002DA840 /* Sources */,
+				19ACD86428617BDA002DA840 /* Frameworks */,
+				19ACD86528617BDA002DA840 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ACD86928617BDA002DA840 /* PBXTargetDependency */,
+			);
+			name = BarzookaUITests;
+			productName = BarzookaUITests;
+			productReference = 19ACD86728617BDA002DA840 /* BarzookaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19ACD84428617BD8002DA840 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					19ACD84B28617BD8002DA840 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					19ACD85C28617BDA002DA840 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 19ACD84B28617BD8002DA840;
+					};
+					19ACD86628617BDA002DA840 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 19ACD84B28617BD8002DA840;
+					};
+				};
+			};
+			buildConfigurationList = 19ACD84728617BD8002DA840 /* Build configuration list for PBXProject "Barzooka" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19ACD84328617BD8002DA840;
+			productRefGroup = 19ACD84D28617BD8002DA840 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19ACD84B28617BD8002DA840 /* Barzooka */,
+				19ACD85C28617BDA002DA840 /* BarzookaTests */,
+				19ACD86628617BDA002DA840 /* BarzookaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19ACD84A28617BD8002DA840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACD85728617BDA002DA840 /* Preview Assets.xcassets in Resources */,
+				19ACD85428617BDA002DA840 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACD85B28617BDA002DA840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACD86528617BDA002DA840 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19ACD84828617BD8002DA840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACD85228617BD8002DA840 /* ContentView.swift in Sources */,
+				19ACD85028617BD8002DA840 /* BarzookaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACD85928617BDA002DA840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACD86228617BDA002DA840 /* BarzookaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ACD86328617BDA002DA840 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACD86E28617BDA002DA840 /* BarzookaUITestsLaunchTests.swift in Sources */,
+				19ACD86C28617BDA002DA840 /* BarzookaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19ACD85F28617BDA002DA840 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ACD84B28617BD8002DA840 /* Barzooka */;
+			targetProxy = 19ACD85E28617BDA002DA840 /* PBXContainerItemProxy */;
+		};
+		19ACD86928617BDA002DA840 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ACD84B28617BD8002DA840 /* Barzooka */;
+			targetProxy = 19ACD86828617BDA002DA840 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19ACD86F28617BDA002DA840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19ACD87028617BDA002DA840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		19ACD87228617BDA002DA840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Barzooka/Barzooka.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Barzooka/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z.Barzooka;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		19ACD87328617BDA002DA840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Barzooka/Barzooka.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Barzooka/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z.Barzooka;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		19ACD87528617BDA002DA840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z.BarzookaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barzooka.app/Contents/MacOS/Barzooka";
+			};
+			name = Debug;
+		};
+		19ACD87628617BDA002DA840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z.BarzookaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barzooka.app/Contents/MacOS/Barzooka";
+			};
+			name = Release;
+		};
+		19ACD87828617BDA002DA840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z.BarzookaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Barzooka;
+			};
+			name = Debug;
+		};
+		19ACD87928617BDA002DA840 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z.BarzookaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Barzooka;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19ACD84728617BD8002DA840 /* Build configuration list for PBXProject "Barzooka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACD86F28617BDA002DA840 /* Debug */,
+				19ACD87028617BDA002DA840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACD87128617BDA002DA840 /* Build configuration list for PBXNativeTarget "Barzooka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACD87228617BDA002DA840 /* Debug */,
+				19ACD87328617BDA002DA840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACD87428617BDA002DA840 /* Build configuration list for PBXNativeTarget "BarzookaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACD87528617BDA002DA840 /* Debug */,
+				19ACD87628617BDA002DA840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ACD87728617BDA002DA840 /* Build configuration list for PBXNativeTarget "BarzookaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ACD87828617BDA002DA840 /* Debug */,
+				19ACD87928617BDA002DA840 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19ACD84428617BD8002DA840 /* Project object */;
+}
