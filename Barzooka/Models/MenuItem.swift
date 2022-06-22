@@ -1,45 +1,51 @@
 //
-//  BarItem.swift
+//  MenuItem.swift
 //  Barzooka
 //
-//  Created by Zhuo FENG on 2022/6/21.
+//  Created by Zhuo FENG on 2022/6/22.
 //
 
 import AppKit
 
-class BarItem: Identifiable, Hashable {
+class MenuItem: Identifiable, Hashable {
     let id = UUID()
     
-    static func == (lhs: BarItem, rhs: BarItem) -> Bool {
+    static func == (lhs: MenuItem, rhs: MenuItem) -> Bool {
         return lhs.id == rhs.id
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.id)
     }
-
-    private var instance: NSStatusItem? = nil
+    
+    private(set) var instance: NSMenuItem? = nil
+    
     var title: String? = nil
     var action: (() -> Void)? = nil
-    var length = NSStatusItem.variableLength
+    var subMenu: Menu? = nil
     
-    var isActive:Bool {
+    var isActive: Bool {
         get { return self.instance != nil }
     }
     
     public func activate() {
         let instance = self.instance == nil
-            ? NSStatusBar.system.statusItem(withLength: self.length)
+            ? NSMenuItem()
             : self.instance!
         
         if let title = self.title {
-            instance.button?.title = title
+            instance.title = title
         }
         
         if let action = self.action {
-            BarItemActionPool.shared.add(instance.button!, action: action)
-            instance.button?.target = BarItemActionPool.shared
-            instance.button?.action = #selector(BarItemActionPool.shared.act)
+            MenuItemActionPool.shared.add(instance, action: action)
+            instance.target = MenuItemActionPool.shared
+            instance.action = #selector(MenuItemActionPool.shared.act)
+        }
+        
+        if let subMenu = self.subMenu {
+            subMenu.activate()
+            instance.submenu = subMenu.instance!
         }
         
         self.instance = instance
@@ -55,7 +61,14 @@ class BarItem: Identifiable, Hashable {
         self.action = action
     }
     
+    init(title: String, subMenu: Menu) {
+        self.title = title
+        self.subMenu = subMenu
+    }
+    
+    
     init(title: String) {
         self.title = title
     }
 }
+

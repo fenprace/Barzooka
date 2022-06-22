@@ -27,8 +27,8 @@ class BarItemActionPool {
     }
 }
 
-class MenuItemActionPoll {
-    static let shared = MenuItemActionPoll()
+class MenuItemActionPool {
+    static let shared = MenuItemActionPool()
     
     private var actions: [NSMenuItem: () -> Void]
     

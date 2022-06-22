@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195A142F28634DCC002C143F /* BarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A142E28634DCC002C143F /* BarItemView.swift */; };
+		195A1431286370B5002C143F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A1430286370B5002C143F /* MenuItem.swift */; };
+		195A1433286378FE002C143F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A1432286378FE002C143F /* Bar.swift */; };
+		195A143528637D74002C143F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A143428637D74002C143F /* Menu.swift */; };
+		195A143728637DD2002C143F /* MenuEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A143628637DD2002C143F /* MenuEditView.swift */; };
 		19ACD85028617BD8002DA840 /* BarzookaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD84F28617BD8002DA840 /* BarzookaApp.swift */; };
 		19ACD85228617BD8002DA840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD85128617BD8002DA840 /* ContentView.swift */; };
 		19ACD85428617BDA002DA840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACD85328617BDA002DA840 /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		195A142E28634DCC002C143F /* BarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemView.swift; sourceTree = "<group>"; };
+		195A1430286370B5002C143F /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		195A1432286378FE002C143F /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		195A143428637D74002C143F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		195A143628637DD2002C143F /* MenuEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuEditView.swift; sourceTree = "<group>"; };
 		19ACD84C28617BD8002DA840 /* Barzooka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barzooka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ACD84F28617BD8002DA840 /* BarzookaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarzookaApp.swift; sourceTree = "<group>"; };
 		19ACD85128617BD8002DA840 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195A142D28634DB0002C143F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				195A142E28634DCC002C143F /* BarItemView.swift */,
+				195A143628637DD2002C143F /* MenuEditView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		19ACD84328617BD8002DA840 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +118,7 @@
 		19ACD84E28617BD8002DA840 /* Barzooka */ = {
 			isa = PBXGroup;
 			children = (
+				195A142D28634DB0002C143F /* Views */,
 				19ACD87A28619E39002DA840 /* Models */,
 				19ACD84F28617BD8002DA840 /* BarzookaApp.swift */,
 				19ACD85128617BD8002DA840 /* ContentView.swift */,
@@ -138,7 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				19ACD87B28619E51002DA840 /* ActionPool.swift */,
+				195A1432286378FE002C143F /* Bar.swift */,
 				19ACD87D2861A043002DA840 /* BarItem.swift */,
+				195A143428637D74002C143F /* Menu.swift */,
+				195A1430286370B5002C143F /* MenuItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,9 +297,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				19ACD87E2861A043002DA840 /* BarItem.swift in Sources */,
+				195A1433286378FE002C143F /* Bar.swift in Sources */,
+				195A143528637D74002C143F /* Menu.swift in Sources */,
 				19ACD87C28619E51002DA840 /* ActionPool.swift in Sources */,
+				195A143728637DD2002C143F /* MenuEditView.swift in Sources */,
 				19ACD85228617BD8002DA840 /* ContentView.swift in Sources */,
+				195A1431286370B5002C143F /* MenuItem.swift in Sources */,
 				19ACD85028617BD8002DA840 /* BarzookaApp.swift in Sources */,
+				195A142F28634DCC002C143F /* BarItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
