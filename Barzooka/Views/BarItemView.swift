@@ -6,82 +6,102 @@
 //
 
 import SwiftUI
+import SwiftEventBus
 
 struct BarItemView: View {
+    @EnvironmentObject var bar: Bar
+    
     @State var selectedItems: Set<BarItem> = Set()
-    @StateObject var bar = Bar()
     @State var isAddOpen = false
     @State var isEditOpen = false
-    
     @State var title: String = ""
+    
+    func openAdd() {
+        self.isAddOpen = true
+    }
+    
+    func dismissAdd() {
+        self.isAddOpen = false
+        self.title = ""
+    }
+    
+    func confirmAdd() {
+        guard !self.title.isEmpty else { return }
+        self.bar.items.append(BarItem(title: self.title))
+        self.bar.apply()
+        self.title = ""
+        self.isAddOpen = false
+    }
+    
+    func openEdit(_ item: BarItem) {
+        self.title = item.title ?? ""
+        self.isEditOpen = true
+    }
+    
+    func dismissEdit() {
+        self.isEditOpen = false
+    }
+    
+    func confirmRemoveSingle(_ item: BarItem) {
+        item.title = self.title
+        self.bar.apply()
+        self.title = ""
+        self.isEditOpen = false
+    }
+    
+    func handleRemove() {
+        self.bar.remove(items: Array(self.selectedItems))
+        self.bar.apply()
+    }
     
     var body: some View {
         VStack {
-            HStack {
-                Button(action: {
-                    self.isAddOpen = true
-                }, label: {
-                    Label("Add", systemImage: "plus.circle")
-                })
-                .popover(isPresented: $isAddOpen, arrowEdge: .bottom, content: {
-                    VStack {
-                        TextField("Title", text: $title)
-                        
-                        Button("Confirm") {
-                            bar.items.append(BarItem(title: self.title))
-                            bar.apply()
-                            self.title = ""
-                            self.isAddOpen = false
-                        }
-                    }
-                    .padding()
-                })
-                
-                Button(action: {
-                    bar.remove(items: Array(self.selectedItems))
-                    bar.apply()
-                }, label: {
-                    Label("Remove", systemImage: "trash")
-                })
-                .disabled($bar.items.isEmpty)
-            }
-            
-            List(bar.items, id: \.self, selection: $selectedItems) { item in
-                HStack {
-                    Text(item.title!)
-
-                    Spacer()
-
-                    Button(action: {
-                        self.isEditOpen = true
-                    }, label: {
-                        Label("Edit", systemImage: "pencil")
-                    })
-                    .popover(isPresented: $isEditOpen) {
-                        VStack {
-                            TextField("Title", text: $title)
-
-                            Button("Confirm") {
-                                item.title = title
-                                bar.apply()
-                                self.title = ""
-                                self.isEditOpen = false
+            List() {
+                ForEach(bar.items, id: \.self) { item in
+                    HStack {
+                        Text(item.title!)
+                        Spacer()
+                        Button(action: {
+                            openEdit(item)
+                        }, label: {
+                            Label("Edit", systemImage: "pencil")
+                        })
+                        .sheet(isPresented: $isEditOpen) {
+                            VStack {
+                                TextField("Title", text: $title)
+                                Button("Confirm") {
+                                    confirmRemoveSingle(item)
+                                }
                             }
+                            .padding()
                         }
-                        .padding()
+                        
+                        Button(action: {
+                            bar.remove(item: item)
+                            bar.apply()
+                        }, label: {
+                            Label("Remove", systemImage: "trash")
+                        })
                     }
-
-                    Button(action: {
-                        bar.remove(item: item)
-                        bar.apply()
-                    }, label: {
-                        Label("Remove", systemImage: "trash")
-                    })
                 }
             }
-            .listStyle(.plain)
         }
-        .padding()
+        .sheet(isPresented: $isAddOpen) {
+            VStack {
+                TextField("Title", text: $title)
+                Button("Confirm", action: confirmAdd)
+            }
+            .onExitCommand(perform: dismissAdd)
+            .padding()
+        }
+        .onAppear {
+            SwiftEventBus.onMainThread(EventPool.shared, name: "addBarItem") { result in
+                self.openAdd()
+            }
+        }
+        .onDisappear {
+            SwiftEventBus.unregister(EventPool.shared, name: "addBarItem")
+        }
     }
 }
 

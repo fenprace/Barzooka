@@ -7,11 +7,20 @@
 
 import AppKit
 
-class Menu: ObservableObject {
+class Menu: Identifiable, ObservableObject {
     @Published var items: [MenuItem]
     @Published var removed: [MenuItem]
+    @Published var name: String = ""
+    
+    let id = UUID()
     
     private(set) var instance: NSMenu? = nil
+    
+    init(name: String) {
+        self.name = name
+        self.items = []
+        self.removed = []
+    }
     
     init(_ items: MenuItem...) {
         self.items = items

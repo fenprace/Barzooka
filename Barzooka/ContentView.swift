@@ -6,33 +6,44 @@
 //
 
 import SwiftUI
+import SwiftEventBus
 
 struct ContentView: View {
-    @State var selectedItems: Set<BarItem> = Set()
     @StateObject var bar = Bar()
-    @State var isAddOpen = false
-    @State var isEditOpen = false
-    
-    @State var title: String = ""
-    
+    @StateObject var mp = MenuPool()
+   
+    @State var tab: Int8? = 0
+
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("ABC") {
-                    BarItemView()
-                        .navigationTitle("BarItem")
-                }
-                
-                NavigationLink("Menu") {
+                NavigationLink(tag: 0, selection: $tab, destination: {
                     MenuEditView()
-                        .navigationTitle("Menu")
-                }
-            }
-            .listStyle(.sidebar)
+                        .environmentObject(mp)
+                }, label: {
+                    Label("Menu", systemImage: "filemenu.and.selection")
+                })
+                
+                NavigationLink(tag: 1, selection: $tab, destination: {
+                    BarItemView()
+                        .environmentObject(bar)
+                }, label: {
+                    Label("Status Bar", systemImage: "menubar.arrow.up.rectangle")
+                })
+            }.listStyle(.sidebar)
         }
         .toolbar {
             ToolbarItem {
-                Text("123")
+                Button("Add") {
+                    switch self.tab {
+                    case 0:
+                        SwiftEventBus.post("addMenu")
+                    case 1:
+                        SwiftEventBus.post("addBarItem")
+                    default:
+                        break
+                    }
+                }
             }
         }
     }

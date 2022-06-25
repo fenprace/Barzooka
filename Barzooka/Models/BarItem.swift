@@ -22,9 +22,14 @@ class BarItem: Identifiable, Hashable {
     var title: String? = nil
     var action: (() -> Void)? = nil
     var length = NSStatusItem.variableLength
+    var menu: Menu? = nil
     
     var isActive:Bool {
         get { return self.instance != nil }
+    }
+    
+    func attach(_ menu: Menu) {
+        self.menu = menu
     }
     
     public func activate() {
@@ -42,12 +47,19 @@ class BarItem: Identifiable, Hashable {
             instance.button?.action = #selector(BarItemActionPool.shared.act)
         }
         
+        if let menu = self.menu {
+            if (!menu.isActive) {
+                menu.activate()
+            }
+            
+            instance.button?.menu = menu.instance
+        }
+        
         self.instance = instance
     }
     
     public func deactivate() {
         self.instance = nil
-        
     }
     
     init(title: String, action: @escaping (() -> Void)) {

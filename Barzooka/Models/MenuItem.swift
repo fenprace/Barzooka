@@ -23,15 +23,20 @@ class MenuItem: Identifiable, Hashable {
     var title: String? = nil
     var action: (() -> Void)? = nil
     var subMenu: Menu? = nil
+    var isSeparator: Bool = false
     
     var isActive: Bool {
         get { return self.instance != nil }
     }
     
     public func activate() {
-        let instance = self.instance == nil
-            ? NSMenuItem()
-            : self.instance!
+        var instance: NSMenuItem
+        
+        if self.isSeparator {
+            instance = NSMenuItem.separator()
+        } else {
+            instance = self.instance ?? NSMenuItem()
+        }
         
         if let title = self.title {
             instance.title = title
@@ -53,7 +58,6 @@ class MenuItem: Identifiable, Hashable {
     
     public func deactivate() {
         self.instance = nil
-        
     }
     
     init(title: String, action: @escaping (() -> Void)) {
@@ -66,9 +70,12 @@ class MenuItem: Identifiable, Hashable {
         self.subMenu = subMenu
     }
     
-    
     init(title: String) {
         self.title = title
+    }
+    
+    init(isSeparator: Bool) {
+        self.isSeparator = isSeparator
     }
 }
 

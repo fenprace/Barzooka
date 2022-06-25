@@ -41,6 +41,7 @@ struct BarzookaApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowToolbarStyle(.unified)
         .commands {
             SidebarCommands()
         }

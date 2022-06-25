@@ -7,6 +7,10 @@
 
 import AppKit
 
+class EventPool {
+    static let shared = EventPool()
+}
+
 class BarItemActionPool {
     static let shared = BarItemActionPool()
     

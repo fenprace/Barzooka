@@ -12,6 +12,7 @@
 		195A1433286378FE002C143F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A1432286378FE002C143F /* Bar.swift */; };
 		195A143528637D74002C143F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A143428637D74002C143F /* Menu.swift */; };
 		195A143728637DD2002C143F /* MenuEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195A143628637DD2002C143F /* MenuEditView.swift */; };
+		195A143A286620CC002C143F /* SwiftEventBus in Frameworks */ = {isa = PBXBuildFile; productRef = 195A1439286620CC002C143F /* SwiftEventBus */; };
 		19ACD85028617BD8002DA840 /* BarzookaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD84F28617BD8002DA840 /* BarzookaApp.swift */; };
 		19ACD85228617BD8002DA840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACD85128617BD8002DA840 /* ContentView.swift */; };
 		19ACD85428617BDA002DA840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACD85328617BDA002DA840 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195A143A286620CC002C143F /* SwiftEventBus in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +184,9 @@
 			dependencies = (
 			);
 			name = Barzooka;
+			packageProductDependencies = (
+				195A1439286620CC002C143F /* SwiftEventBus */,
+			);
 			productName = Barzooka;
 			productReference = 19ACD84C28617BD8002DA840 /* Barzooka.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 19ACD84328617BD8002DA840;
+			packageReferences = (
+				195A1438286620CC002C143F /* XCRemoteSwiftPackageReference "SwiftEventBus" */,
+			);
 			productRefGroup = 19ACD84D28617BD8002DA840 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		195A1438286620CC002C143F /* XCRemoteSwiftPackageReference "SwiftEventBus" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cesarferreira/SwiftEventBus";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		195A1439286620CC002C143F /* SwiftEventBus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 195A1438286620CC002C143F /* XCRemoteSwiftPackageReference "SwiftEventBus" */;
+			productName = SwiftEventBus;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 19ACD84428617BD8002DA840 /* Project object */;
 }
